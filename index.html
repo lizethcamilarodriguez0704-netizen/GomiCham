@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title> Gomicham.com</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+   <nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="#inicio" class="nav-button active">Inicio</a>
+
+        <a href="#descripcion" class="nav-button">Descripción</a>
+
+        <a href="#contacto" class="nav-button">Contacto</a>
+
+        <a href="#ayuda" class="nav-button">Ayuda</a>
+
+    </div>
+
+</nav>
+
+
+    <main class="page">
+
+
+        <div class="website-title">
+
+    <img src="WhatsApp Image 2026-09-04 at 1.59.58 PM.jpeg" alt="Logo" class="logo">
+
+    <div>
+        GOMICHAM
+
+        <span>
+            — Una experiencia diferente
+        </span>
+    </div>
+
+</div>
+
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+            </div>
+
+        </section>
+
+
+        <div class="cta-container">
+
+            <button class="cta"
+                    onclick="irA('descripcion')">
+
+                ¡Conoce más!
+
+            </button>
+
+        </div>
+
+
+        <div class="content-grid">
+
+
+            <section class="card testimonials">
+
+                <h2>
+                    ¿Que hace diferente a Gomicham?
+                </h2>
+
+                <div class="quote">
+
+
+
+                    <br><br>
+
+                    " cada mordida es una explosión de sabores."
+
+                    <br><br>
+
+                </div>
+
+
+                <div class="quote">
+
+            
+
+                    <br><br>
+                    "En Gomicham combinamos lo dulce con 
+                    un toque de picante para crear
+                     una experiencia diferente,
+                     divertida y deliciosa."
+
+                    <br><br>
+
+                </div>
+
+            </section>
+
+            <section class="card video-container">
+
+                <div class="video">
+
+                    <button class="play-button"
+                            onclick="mostrarVideo()">
+
+                        ▶
+
+                    </button>
+
+                </div>
+
+
+                <div class="video-controls">
+
+                    <input
+                        type="range"
+                        class="progress"
+                        min="0"
+                        max="100"
+                        value="0"
+                    >
+
+                </div>
+
+            </section>
+
+            <section class="card panels">
+
+
+                <button class="panel-button selected"
+                        onclick="cambiarPanel(1, this)">
+
+                    Panel 1
+
+                </button>
+
+
+                <div class="panel-content"
+                     id="panel-content">
+                    <img src="Adobe Express - file.jpg" alt="">
+
+                </div>
+
+
+            </button>
+
+            </section>
+
+        </div>
+
+        <section class="info-section"
+                 id="descripcion">
+
+            <h2>
+                Descripición
+            </h2>
+
+            <p>
+                GomiCham es un emprendimiento dedicado a la elaboración
+                 y comercialización de gomitas enchiladas, que combina
+                  sabores dulces, ácidos y picantes para crear una
+                   experiencia diferente y divertida. Nuestro proyecto
+                    busca ofrecer un producto llamativo, de buena calidad 
+                    y accesible, pensado para quienes disfrutan de probar 
+                    nuevos sabores y buscan más que un dulce.
+            </p>
+
+            
+
+        </section>
+
+        <section class="info-section"
+                 id="contacto">
+
+            <h2>
+                📞Contactos
+            </h2>
+
+            <p>
+                ¿Quieres comunicarte con nosotros?
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                contacto@tupagina.com
+            </p>
+
+            <p>
+                <strong>Teléfono:</strong>
+                +57 300 000 0000
+            </p>
+
+        </section>
+
+        <section class="info-section"
+                 id="ayuda">
+
+            <h2>
+                ❓ Ayuda
+            </h2>
+
+            <p>
+                ¿Tienes alguna pregunta?
+                Estamos aquí para ayudarte.
+                 Encuentra respuestas 
+                a las dudas más comunes sobre
+                 nuestros productos y pedidos.
+            </p>
+
+            <p>
+                Si tienes algún problema,
+                puedes comunicarte con nosotros
+                desde la sección de contactos.
+            </p>
+
+        </section>
+
+
+
+
+        <footer class="footer">
+
+            <a onclick="irA('inicio')">
+                Inicio
+            </a>
+
+            <a onclick="irA('contacto')">
+                Contacto
+            </a>
+
+            <a onclick="irA('descripcion')">
+                Descripción
+            </a>
+
+        </footer>
+
+
+    </main>
+
+    <script>
+
+        function irA(id) {
+
+            const elemento =
+                document.getElementById(id);
+
+            if (elemento) {
+
+                elemento.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+            }
+             }
+
+        function mostrarVideo() {
+
+            alert(
+                "Aquí puedes colocar tu video "
+            );
+
+        }
+
+        function cambiarPanel(numero, boton) {
+
+            const contenido =
+                document.getElementById(
+                    "panel-content"
+                );
+
+            const botones =
+                document.querySelectorAll(
+                    ".panel-button"
+                );
+
+            botones.forEach(function(btn) {
+
+                btn.classList.remove(
+                    "selected"
+                );
+
+            });
+
+            boton.classList.add(
+                "selected"
+            );
+
+            if (numero === 1) {
+
+                contenido.innerHTML = `
+
+                    <h3>
+                        Información
+                    </h3>
+
+                    <p>
+                       GomiCham es un emprendimiento dedicado
+                        a la elaboración y comercialización de gomitas
+                        enchiladas, combinando diferentes sabores, colores
+                         y un toque picante para ofrecer una experiencia
+                          divertida y diferente. .
+                    </p>
+
+                `;
+
+            }
+
+
+        }
+
+        const navButtons =
+            document.querySelectorAll(
+                ".nav-button"
+            );
+
+
+        navButtons.forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    navButtons.forEach(
+                        function(btn) {
+
+                            btn.classList.remove(
+                                "active"
+                            );
+
+                        }
+                    );
+
+                    this.classList.add(
+                        "active"
+                    );
+
+                }
+            );
+
+        });
+
+    </script>
+
+</body>
+
+</html>

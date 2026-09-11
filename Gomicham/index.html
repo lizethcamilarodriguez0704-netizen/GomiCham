@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GomiCham | Endulza tu existencia</title>
+
+    <!-- Tipografías -->
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bangers&family=Bungee&family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+   <div class="logo">
+    <img src="WhatsApp Image 2026-09-04 at 1.59.58 PM.jpeg" alt="Logo GomiCham">
+    <span>GomiCham</span>
+</div>
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#productos">Productos</a>
+
+        <a href="#promociones">Promociones</a>
+
+        <a href="#nosotros">Nosotros</a>
+
+        <a href="#contacto">Contacto</a>
+
+    </nav>
+
+    <div class="carrito">
+
+        🛒
+
+        <span id="contador">0</span>
+
+    </div>
+
+</header>
+
+<section id="inicio" class="hero">
+
+    <div class="hero-text">
+
+        <h1>
+            GOMITAS<br>
+            ENCHILADAS
+        </h1>
+
+        <p class="frase">
+
+            "para quienes buscan algo más dulce."
+
+        </p>
+
+        <p class="descripcion">
+
+            Descubre el equilibrio perfecto entre lo dulce y lo picante.
+            En GomiCham cada gomita está preparada para hacer de cada
+            bocado una experiencia inolvidable.
+
+        </p>
+
+        <a href="#productos">
+
+            <button id="comprarAhora">
+
+                Comprar Ahora
+
+            </button>
+
+        </a>
+
+    </div>
+
+    <div class="hero-img">
+
+        <img src="WhatsApp Image 2026-09-10 at 10.10.16 PM.jpeg"
+             alt="Gomitas Enchiladas">
+
+    </div>
+
+</section>
+
+<section class="beneficios">
+
+    <div class="beneficio">
+
+        <h3>Sabor Único</h3>
+
+        <p>
+            Dulce y picante en cada mordida.
+        </p>
+
+    </div>
+
+    <div class="beneficio">
+
+        
+        <h3>Entrega Rápida</h3>
+
+        <p>
+            Recibe tu pedido en poco tiempo.
+        </p>
+
+    </div>
+
+    <div class="beneficio">
+
+
+        <h3>Calidad Premium</h3>
+
+        <p>
+            Productos frescos y deliciosos.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="productos" class="productos">
+
+    <h2>NUESTROS PRODUCTOS</h2>
+
+    <p class="subtitulo">
+        Escoge tus gomitas favoritas y agrégalas al carrito.
+    </p>
+
+    <div class="cards">
+
+        <!-- Producto 1 -->
+
+        <div class="card">
+
+            <span class="etiqueta">Más Vendido</span>
+
+            <img src="img/producto1.jpg" alt="Mix Picante">
+
+            <h3>Mix Picante</h3>
+
+            <p class="descripcion-producto">
+                Mezcla de gomitas cubiertas con chamoy y chile.
+            </p>
+
+            <p class="precio">$5.000</p>
+
+            <button class="btn-agregar">
+                Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- Producto 2 -->
+
+        <div class="card">
+
+            <span class="etiqueta nuevo">Nuevo</span>
+
+            <img src="img/producto2.jpg" alt="Aros Enchilados">
+
+            <h3>Aros Enchilados</h3>
+
+            <p class="descripcion-producto">
+                Deliciosos aros con el toque perfecto de picante.
+            </p>
+
+            <p class="precio">$6.000</p>
+
+            <button class="btn-agregar">
+                Agregar al carrito
+            </button>
+
+        </div>
+
+        <!-- Producto 3 -->
+
+        <div class="card">
+
+            <span class="etiqueta">Favorito</span>
+
+            <img src="img/producto3.jpg" alt="Ositos Ácidos">
+
+            <h3>Ositos Ácidos</h3>
+
+            <p class="descripcion-producto">
+                Dulces, ácidos y enchilados.
+            </p>
+
+            <p class="precio">$5.500</p>
+
+            <button class="btn-agregar">
+                Agregar al carrito
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="carrito-container">
+
+    <h2>🛒 Mi Carrito</h2>
+
+    <ul id="lista-carrito">
+
+    </ul>
+
+    <div class="total">
+
+        <h3>Total:</h3>
+
+        <p id="total-precio">$0</p>
+
+    </div>
+
+    <div class="acciones-carrito">
+
+        <button id="vaciar-carrito" onclick="vaciarCarrito()">Vaciar carrito
+
+        </button>
+
+        <button id="comprar-whatsapp">
+
+            Comprar por WhatsApp
+
+        </button>
+
+    </div>
+   
+</section>
+
+<section id="formulario-pedido" class="formulario-pedido">
+
+    <div class="formulario-contenido">
+
+        <h2>REALIZA TU PEDIDO</h2>
+
+        <p class="subtitulo-formulario">
+            Completa tus datos y envía tu pedido por WhatsApp.
+        </p>
+
+        <form id="form-pedido">
+
+            <div class="campo">
+                <label for="nombre">Nombre completo</label>
+                <input
+                    type="text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="telefono">Número de teléfono</label>
+                <input
+                    type="tel"
+                    id="telefono"
+                    name="telefono"
+                    placeholder="Ej: 3001234567"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="direccion">Dirección de entrega</label>
+                <input
+                    type="text"
+                    id="direccion"
+                    name="direccion"
+                    placeholder="Escribe tu dirección"
+                    required
+                >
+            </div>
+
+            <div class="campo">
+                <label for="pago">Método de pago</label>
+
+                <select id="pago" name="pago" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia">Transferencia</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="observaciones">Observaciones</label>
+
+                <textarea
+                    id="observaciones"
+                    name="observaciones"
+                    rows="4"
+                    placeholder="¿Alguna indicación para tu pedido?"
+                ></textarea>
+            </div>
+
+            
+            <div class="resumen-pedido">
+
+                <h3>Resumen del pedido</h3>
+
+                <div id="resumen-productos">
+                    Tu carrito está vacío.
+                </div>
+
+                <div class="resumen-total">
+                    <strong>Total:</strong>
+                    <span id="resumen-total">$0</span>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn-enviar-pedido">
+                Enviar pedido por WhatsApp
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<section id="promociones" class="promo">
+
+    <h2>
+
+         PROMOCIONES 
+
+    </h2>
+
+    <div class="promo-cards">
+
+        <div class="promo-card">
+
+            <h3>2 x $9.000</h3>
+
+            <p>
+                Lleva dos paquetes seleccionados.
+            </p>
+
+        </div>
+
+        <div class="promo-card">
+
+            <h3>3 x $13.500</h3>
+
+            <p>
+                Ideal para compartir.
+            </p>
+
+        </div>
+
+        <div class="promo-card">
+
+            <h3>Envío Gratis</h3>
+
+            <p>
+                En compras superiores a $30.000.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="nosotros" class="nosotros">
+
+    <div class="nosotros-contenido">
+
+        <div class="nosotros-texto">
+
+            <h2>¿Quiénes Somos?</h2>
+
+            <p>
+                En <strong>GomiCham</strong> creemos que cada gomita puede
+                convertirse en una experiencia llena de sabor, color y
+                diversión.
+            </p>
+
+            <p>
+                Nuestro objetivo es ofrecer productos de excelente calidad,
+                preparados con ingredientes cuidadosamente seleccionados y
+                el toque perfecto de chamoy y chile.
+            </p>
+
+            <p class="frase-nosotros">
+                "Para quienes buscan algo más que un dulce."
+            </p>
+
+        </div>
+
+        <div class="nosotros-img">
+
+            <img src="WhatsApp Image 2026-06-25 at 12.12.27 PM.jpeg" alt="GomiCham">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer id="contacto">
+
+    <div class="footer-contenido">
+
+        <div class="footer-logo">
+
+            <h2>GomiCham</h2>
+
+            <p>
+                para quienes buscan algo más que un dulce.
+            </p>
+
+        </div>
+
+        <div class="footer-links">
+
+            <h3>Enlaces</h3>
+
+            <a href="#inicio">Inicio</a>
+
+            <a href="#productos">Productos</a>
+
+            <a href="#promociones">Promociones</a>
+
+            <a href="#nosotros">Nosotros</a>
+
+        </div>
+
+        <div class="footer-contacto">
+
+            <h3>Contacto</h3>
+
+            <p>📱 +57 000 000 0000</p>
+
+            <p>📧 gomicham@gmail.com</p>
+
+            <p>📍 Colombia</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 GomiCham | Todos los derechos reservados.
+
+    </p>
+
+</footer>
+
+<a href="https:wa.me/57*****" class="whatsapp" target="_blank">
+
+  💬 
+
+</a>
+
+<script src="script.js"></script>
+
+</body>
+</html>
