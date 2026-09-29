@@ -57,8 +57,7 @@ section{
 }
 
 header{
-
-    position:fixed;
+    position: absolute; /* Cambiamos de 'fixed' a 'absolute' para que se mueva con la página */
     top:0;
     left:0;
 

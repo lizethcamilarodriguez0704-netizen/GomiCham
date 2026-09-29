@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GomiCham | Carrito</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bangers&family=Bungee&family=Montserrat:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Playfair+Display:wght@500;700&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <a href="index.html" class="logo">
+        <img src="WhatsApp Image 2026-09-04 at 1.59.58 PM.jpeg" alt="Logo GomiCham">
+        <span>GomiCham</span>
+    </a>
+
+    <nav>
+
+        <a href="index.html#inicio">Inicio</a>
+
+        <a href="index.html#productos">Productos</a>
+
+        <a href="index.html#promociones">Promociones</a>
+
+        <a href="index.html#nosotros">Nosotros</a>
+
+        <a href="index.html#contacto">Contacto</a>
+
+    </nav>
+
+    <div class="carrito">
+
+        🛒
+
+     <span id="contador"></span>
+
+    </div>
+
+</header>
+
+
+<main>
+
+    <!-- CARRITO -->
+
+    <section class="carrito-container">
+
+        <h2>🛒 Mi Carrito</h2>
+
+        <ul id="lista-carrito"></ul>
+
+        <div class="total">
+
+            <h3>Total:</h3>
+
+            <p id="total-precio">$0</p>
+
+        </div>
+
+        <div class="acciones-carrito">
+
+            <button id="vaciar-carrito" onclick="vaciarCarrito()">
+                Vaciar carrito
+            </button>
+
+            <button id="comprar-whatsapp">
+                Comprar por WhatsApp
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- FORMULARIO -->
+
+    <section id="formulario-pedido" class="formulario-pedido">
+
+        <div class="formulario-contenido">
+
+            <h2>REALIZA TU PEDIDO</h2>
+
+            <p class="subtitulo-formulario">
+                Completa tus datos y envía tu pedido por WhatsApp.
+            </p>
+
+            <form id="form-pedido">
+
+                <div class="campo">
+
+                    <label for="nombre">
+                        Nombre completo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Escribe tu nombre"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefono">
+                        Número de teléfono
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="telefono"
+                        name="telefono"
+                        placeholder="Ej: 3001234567"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="direccion">
+                        Dirección de entrega
+                    </label>
+
+                    <input
+                        type="text"
+                        id="direccion"
+                        name="direccion"
+                        placeholder="Escribe tu dirección"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="pago">
+                        Método de pago
+                    </label>
+
+                    <select id="pago" name="pago" required>
+
+                        <option value="">
+                            Selecciona una opción
+                        </option>
+
+                        <option value="Efectivo">
+                            Efectivo
+                        </option>
+
+                        <option value="Transferencia">
+                            Transferencia
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="observaciones">
+                        Observaciones
+                    </label>
+
+                    <textarea
+                        id="observaciones"
+                        name="observaciones"
+                        rows="4"
+                        placeholder="¿Alguna indicación para tu pedido?"
+                    ></textarea>
+
+                </div>
+
+
+                <!-- RESUMEN -->
+
+                <div class="resumen-pedido">
+
+                    <h3>Resumen del pedido</h3>
+
+                    <div id="resumen-productos">
+                        Tu carrito está vacío.
+                    </div>
+
+                    <div class="resumen-total">
+
+                        <strong>Total:</strong>
+
+                        <span id="resumen-total">
+                            $0
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn-enviar-pedido"
+                >
+                    Enviar pedido por WhatsApp
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
