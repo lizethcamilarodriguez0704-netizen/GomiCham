@@ -1,20 +1,13 @@
-// ===============================
-// INICIALIZACIÓN DEL CARRITO
-// ===============================
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let total = 0;
 
-// Elementos comunes en las páginas
 const contador = document.getElementById("contador");
 const listaCarrito = document.getElementById("lista-carrito");
 const totalPrecio = document.getElementById("total-precio");
 
-// Actualizar el contador del carrito apenas carga la página
 actualizarContadorGlobal();
 
-// ===============================
-// 1. FUNCIONALIDAD EN INDEX.HTML (AGREGAR)
-// ===============================
+
 const botonesAgregar = document.querySelectorAll(".btn-agregar");
 
 botonesAgregar.forEach((boton) => {
@@ -26,16 +19,15 @@ botonesAgregar.forEach((boton) => {
         const precioTexto = card.querySelector(".precio").textContent;
         const precio = Number(precioTexto.replace(/\D/g, ""));
 
-        // Agregar producto al array
+       
         carrito.push({ nombre, precio });
 
-        // Guardar en localStorage
+       
         localStorage.setItem("carrito", JSON.stringify(carrito));
 
-        // Actualizar contador visual
         actualizarContadorGlobal();
 
-        // Alerta o feedback visual opcional
+      
         alert(`¡Agregaste "${nombre}" al carrito! 🛒`);
     });
 });
@@ -46,9 +38,7 @@ function actualizarContadorGlobal() {
     }
 }
 
-// ===============================
-// 2. FUNCIONALIDAD EN CARRITO.HTML
-// ===============================
+
 function actualizarCarrito() {
     if (!listaCarrito) return;
 
@@ -131,9 +121,6 @@ if (listaCarrito) {
     actualizarCarrito();
 }
 
-// ===============================
-// 3. FORMULARIO Y WHATSAPP
-// ===============================
 const btnWhatsapp = document.getElementById("comprar-whatsapp");
 const formularioPedido = document.getElementById("formulario-pedido");
 
@@ -191,16 +178,14 @@ ${observaciones || "Ninguna"}
 
 ¡Gracias!`;
 
-        const numeroWhatsApp = "573001234567"; // Reemplaza con tu número real
+        const numeroWhatsApp = "573189977187"; 
         const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
 
         window.open(url, "_blank");
     });
 }
 
-// ===============================
-// OTROS EFECTOS VISUALES
-// ===============================
+
 const botonComprar = document.querySelector(".hero button");
 if (botonComprar) {
     botonComprar.addEventListener("click", () => {
